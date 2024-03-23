@@ -1,0 +1,127 @@
+{
+  "Version": 1.1,
+  "General": {
+    "CloudInstanceName": "",
+    "Project": "",
+    "ProjectOwnerNavicatID": "",
+    "Server": "mksha",
+    "Host": "aws-0-us-east-1.pooler.supabase.com",
+    "Catalog": "postgres",
+    "Schema": "public",
+    "Comment": "",
+    "ServerType": "PGSQL",
+    "SpecifiedFileName": "",
+    "IsLockTable": false,
+    "UseSingleTransaction": false,
+    "UseSpecifiedFileName": false
+  },
+  "Tables": {
+    "SelectAll": false,
+    "Selected": [
+      {
+        "Name": "auth_group",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "auth_group_permissions",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "auth_permission",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "auth_user",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "auth_user_groups",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "auth_user_user_permissions",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "django_content_type",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "django_migrations",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "django_session",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_cache",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_custommodel",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_friendmodel",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_imagemodel",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_notificationmodel",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_postmodel",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_settingmodel",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_statisticpv",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_statisticuv",
+        "ObjectType": "TableNormal_PGSQL"
+      },
+      {
+        "Name": "hexoweb_talkmodel",
+        "ObjectType": "TableNormal_PGSQL"
+      }
+    ]
+  },
+  "Views": {
+    "SelectAll": true,
+    "Selected": []
+  },
+  "Functions": {
+    "SelectAll": true,
+    "Selected": []
+  },
+  "Events": {
+    "SelectAll": false,
+    "Selected": []
+  },
+  "Sequences": {
+    "SelectAll": true,
+    "Selected": []
+  },
+  "Types": {
+    "SelectAll": true,
+    "Selected": []
+  },
+  "Indexes": {
+    "SelectAll": false,
+    "Selected": []
+  },
+  "Triggers": {
+    "SelectAll": false,
+    "Selected": []
+  }
+}
