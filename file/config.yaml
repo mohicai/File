@@ -326,6 +326,9 @@ proxy-groups:
   - name: BYBIT
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
+  - name: Cloudflare
+    icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
+    <<: *proxy_groups
 
   - name: 小红书
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/XiaoHongShu.svg"
@@ -691,7 +694,8 @@ rules:
 
   - DOMAIN-KEYWORD,bybit,BYBIT
   - DOMAIN-KEYWORD,binan,BYBIT
-
+  - DOMAIN-KEYWORD,cloudflare,Cloudflare
+  
   - DST-PORT,53,🌐 DNS_Hijack
   - DST-PORT,853,DNS连接
 
