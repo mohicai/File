@@ -360,6 +360,11 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Apple.svg"
     <<: *proxy_groups
 
+  - name: Copilot
+    icon: "https://pics.pc768.com/pc768/imgfile/20240118/18134627db2n.png"
+    <<: *proxy_groups
+
+
   - name: Microsoft
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Microsoft.svg"
     <<: *proxy_groups
@@ -701,6 +706,9 @@ rules:
   - DOMAIN-KEYWORD,bybit,BYBIT
   - DOMAIN-KEYWORD,binan,BYBIT
   - DOMAIN-KEYWORD,cloudflare,Cloudflare
+  - DOMAIN-KEYWORD,copilot,Copilot
+  
+  
   
   - DST-PORT,53,🌐 DNS_Hijack
   - DST-PORT,853,DNS连接
