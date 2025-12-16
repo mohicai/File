@@ -103,6 +103,7 @@ proxy-providers: # ← 此函数位置请勿变动！此为模块更新时备份
     #path: /storage/emulated/0/ClashMi/1.trojan.yaml
     path: ./proxies/1.trojan.yaml
     url: "https://ddd.mohic.lol/Monchan"
+    interval: 600
     #url: "https://tran.mohic.lol/Monchan"
   1.pri: # 如遇订阅加载不出来，请尝试切换ua
     <<: *p
@@ -124,6 +125,7 @@ proxy-providers: # ← 此函数位置请勿变动！此为模块更新时备份
       additional-prefix: "Main："
     path: ./proxies/1.sky.yaml
     url: "https://skysub1.fawnnode.xyz/link/PrKC9zSw9mja1dxs?clash=1"
+    interval: 600
 
 
   1.SKYVPN: # 如遇订阅加载不出来，请尝试切换ua
@@ -132,6 +134,7 @@ proxy-providers: # ← 此函数位置请勿变动！此为模块更新时备份
       additional-prefix: "Main："
     path: ./proxies/1.SKYVPN.yaml
     url: "https://v1.mk/AWOdE4A"
+    interval: 600
 
   1.主要地址: # 如遇订阅加载不出来，请尝试切换ua
     <<: *p
@@ -139,6 +142,7 @@ proxy-providers: # ← 此函数位置请勿变动！此为模块更新时备份
       additional-prefix: "Main："
     path: ./proxies/1.主要地址.yaml
     url: "https://gist.githubusercontent.com/mohicai/8cdd80345c12854f0d78ec2faa0ca884/raw/clashlink.yaml"
+    interval: 600
 
   2.备用地址:
     <<: *p
@@ -146,6 +150,7 @@ proxy-providers: # ← 此函数位置请勿变动！此为模块更新时备份
       additional-prefix: "Minor："
     path: ./proxies/2.备用地址.yaml
     url: "https://v1.mk/AWOdE4A"
+    interval: 600
 
   3.额外地址:
     <<: *p
