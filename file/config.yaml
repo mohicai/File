@@ -307,26 +307,31 @@ proxy-groups:
 
 
   - name: skyvpn
+    interval: 300
     type: url-test
     <<: *SKY
 
   - name: SKYVPN
     icon: "https://youke1.picui.cn/s1/2025/11/06/690b8b0a1e96d.png"
+    interval: 300
     type: url-test
     <<: *SKYVPN
 
   - name:  私有节点
     icon: "https://youke1.picui.cn/s1/2025/11/05/690abb5e2fe31.png"
+    interval: 300
     type: url-test
     <<: *PRI
 
   - name:  warp
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab83c3f2aa.png"
+    interval: 300
     type: url-test
     <<: *WARP
 
   - name: trojan
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab8af34b0d.png"
+    interval: 300
     type: url-test
     <<: *TROJAN
 
@@ -473,31 +478,37 @@ proxy-groups:
     <<: *A
 
   - name: ALL·日本地区
+    interval: 600
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/JP.svg"
     filter: "^(?=.*(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)).*$"
     <<: *All
 
   - name: ALL·中国台湾
+    interval: 600
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/CN.svg"
     filter: "^(?=.*(台|新北|彰化|TW|Taiwan|taipei)).*$"
     <<: *All
 
   - name: ALL·香港地区
+    interval: 600
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/HK.svg"
     filter: "^(?=.*(港|HK|hk|Hong Kong|HongKong|hongkong)).*$"
     <<: *All
 
   - name: ALL·美国地区
+    interval: 600
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/US.svg"
     filter: "^(?=.*(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)).*$"
     <<: *All
 
   - name: ALL·狮城地区
+    interval: 600
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Singapore.svg"
     filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$"
     <<: *All
 
   - name: ALL·其它地区
+    interval: 600
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Globe.svg"
     filter: "^(?!.*(港|HK|hk|Hong Kong|HongKong|hongkong|日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States|台|新北|彰化|TW|Taiwan|新加坡|坡|狮城|SG|Singapore|灾|网易|Netease|套餐|重置|剩余|到期|订阅|群|账户|流量|有效期|时间|官网|拒绝|DNS|Ch|网址|售|防失)).*$"
     <<: *All
