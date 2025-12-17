@@ -466,6 +466,7 @@ proxy-groups:
     type: url-test
     <<: *A
 
+
   - name: ALL·负载均衡
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Return.svg"
     type: load-balance
