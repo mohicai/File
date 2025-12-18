@@ -291,7 +291,7 @@ proxy-groups:
 
   - name: 总模式
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/All.svg"
-    type: select
+    #type: select
     <<: *proxy_groups
 
   - name: skyvpn
