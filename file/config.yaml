@@ -124,7 +124,7 @@ proxy-providers: # ← 此函数位置请勿变动！此为模块更新时备份
     override:
       additional-prefix: "Main："
     path: ./proxies/1.sky.yaml
-    url: "https://skysub1.fawnnode.xyz/link/PrKC9zSw9mja1dxs?clash=1"
+    url: "https://skysub1.fawnnode.xyz/link/g5tmlRecY1CuOoIA?clash=1"
     interval: 600
 
 
