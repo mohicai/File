@@ -258,7 +258,6 @@ proxy_groups: &proxy_groups
     proxies:
       - 国内连接
       - 国外连接
-      - 总模式
       - cloudproxyw
       - relay-warp
       - relay-trojan
