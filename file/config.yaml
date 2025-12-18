@@ -471,7 +471,7 @@ proxy-groups:
   - name: ALL·延迟最低
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Return.svg"
     type: url-test
-    <<: *A
+    <<: skyvpn
 
 
   - name: ALL·负载均衡
