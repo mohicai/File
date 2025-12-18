@@ -292,8 +292,6 @@ proxy-groups:
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/All.svg"
     type: select
     proxies:
-      - 国内连接
-      - 国外连接
       - cloudproxyw
       - relay-warp
       - relay-trojan
