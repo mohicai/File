@@ -292,19 +292,7 @@ proxy-groups:
   - name: 总模式
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/All.svg"
     type: select
-    proxies:
-      - SKYVPN
-      - ALL·延迟最低
-      - ALL·负载均衡
-      - ALL·故障转移
-      - ALL·日本地区
-      - ALL·中国台湾
-      - ALL·香港地区  
-      - ALL·美国地区
-      - ALL·狮城地区
-      - ALL·其它地区
-      - 🌐 本机·本地直连
-
+    <<: *proxy_groups
 
   - name: skyvpn
     interval: 300
