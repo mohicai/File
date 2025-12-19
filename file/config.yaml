@@ -359,7 +359,11 @@ proxy-groups:
   - name: 小红书
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/XiaoHongShu.svg"
     <<: *proxy_groups
-
+    
+  - name: Temu
+    icon: "https://trademark-img.qcc.com/image/e3f51a3dbe37e673a55542f78b9a8c97.jpg/img"
+    <<: *proxy_groups
+    
   - name: 淘宝
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ac393034b0.png"
     <<: *proxy_groups
@@ -735,7 +739,7 @@ rules:
   - DOMAIN-KEYWORD,binan,BYBIT
   - DOMAIN-KEYWORD,cloudflare,Cloudflare
   - DOMAIN-KEYWORD,copilot,Copilot
-  
+  - DOMAIN-KEYWORD,temu,Temu
   
   
   - DST-PORT,53,🌐 DNS_Hijack
