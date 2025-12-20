@@ -355,7 +355,10 @@ proxy-groups:
   - name: Cloudflare
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
-  - name: CF类网站
+  - name: CF类网站  - name: Cloudflare
+    icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
+    <<: *proxy_groups
+
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
 
@@ -810,7 +813,7 @@ rules:
   - RULE-SET,Telegram_域,Telegram
   - RULE-SET,Telegram_IP,Telegram,no-resolve
 
-  - RULE-SET,cloudflare_ip,CF类网站
+  - RULE-SET,cloudflare_ip,CF类网站,no-resolve
   
   - RULE-SET,Private_域,🌐 本机·本地直连
   - RULE-SET,Private_IP,🌐 本机·本地直连,no-resolve
