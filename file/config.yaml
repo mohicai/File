@@ -355,6 +355,9 @@ proxy-groups:
   - name: Cloudflare
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
+  - name: CF类网站
+    icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
+    <<: *proxy_groups
 
   - name: 小红书
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/XiaoHongShu.svg"
@@ -728,9 +731,16 @@ rule-providers:
     <<: *IPCIDR
     path: ./rules/Private_IP.mrs
     url: "https://cdn.jsdelivr.net/gh/GitMetaio/rule@master/rule/Clash/Lan/Lan_OCD_IP.mrs"
-# —————————
+    rule-providers:
+  cloudflare_ip:
+    type: http
+    behavior: ipcidr
+    url: "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cloudflare/cloudflare_plain.txt"
+    path: ./ruleset/cloudflare.yaml
+    interval: 86400
 
 rules:
+
   - PROCESS-NAME,com.taobao.taobao,淘宝
   - PROCESS-NAME,com.bybit.app,BYBIT
   - PROCESS-NAME,news.bad.app,总模式
@@ -800,6 +810,8 @@ rules:
   - RULE-SET,Telegram_域,Telegram
   - RULE-SET,Telegram_IP,Telegram,no-resolve
 
+  - RULE-SET,cloudflare_ip,CF类网站
+  
   - RULE-SET,Private_域,🌐 本机·本地直连
   - RULE-SET,Private_IP,🌐 本机·本地直连,no-resolve
 
