@@ -355,9 +355,8 @@ proxy-groups:
   - name: Cloudflare
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
-    
   - name: CF类网站
-    icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
+    #icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
 
   - name: 小红书
