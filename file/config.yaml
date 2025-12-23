@@ -378,7 +378,9 @@ proxy-groups:
   - name: BiliBili
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/BiliBili.svg"
     <<: *proxy_groups
-
+  - name: mohic
+    #icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/BiliBili.svg"
+    <<: *proxy_groups
   - name: Steam
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Steam.svg"
     <<: *proxy_groups
@@ -750,7 +752,7 @@ rules:
   - DOMAIN-KEYWORD,cloudflare,Cloudflare
   - DOMAIN-KEYWORD,copilot,Copilot
   - DOMAIN-KEYWORD,temu,Temu
-  
+  - DOMAIN-KEYWORD,mohic,mohic
   
   - DST-PORT,53,🌐 DNS_Hijack
   - DST-PORT,853,DNS连接
