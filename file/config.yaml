@@ -745,7 +745,8 @@ rules:
 
   - PROCESS-NAME,com.taobao.taobao,淘宝
   - PROCESS-NAME,com.bybit.app,BYBIT
-  - PROCESS-NAME,news.bad.app,总模式
+  - PROCESS-NAME,news.bad.app,relay-skyvpn
+  - PROCESS-NAME,pl.solidexplorer2,广告拦截
 
   - DOMAIN-KEYWORD,bybit,BYBIT
   - DOMAIN-KEYWORD,binan,BYBIT
