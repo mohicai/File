@@ -356,8 +356,18 @@ proxy-groups:
     icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
     <<: *proxy_groups
   - name: CF类网站
+    type: select
+    proxies:
+      - 国内连接
+      - 国外连接
+      - relay-skyvpn
+      - skyvpn
+      - SKYVPN
+      - ⛔️ 禁止·拒绝连接
+      - 🌐 本机·本地直连
     #icon: "https://youke1.picui.cn/s1/2025/11/05/690ab7d9df1cd.png"
-    <<: *proxy_groups
+    
+    
 
   - name: 小红书
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/XiaoHongShu.svg"
