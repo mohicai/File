@@ -286,7 +286,7 @@ proxy-groups:
 
   - {name: 国内连接, icon: "https://youke1.picui.cn/s1/2025/11/05/690abd4ee6d41.png", type: select, proxies: [cloudproxyw, relay-warp,  relay-trojan, relay-private, relay-skyvpn , SKYVPN, 总模式, 🌐 本机·本地直连]}
 
-  - {name: 国外连接, icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Return.svg", type: select, proxies: [cloudproxyw, relay-warp,  relay-trojan, relay-private,trojan, relay-skyvpn ,SKYVPN,  总模式, 🌐 本机·本地直连]}
+  - {name: 国外连接, icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/Return.svg", type: select, proxies: [cloudproxyw, relay-warp,  relay-trojan, relay-private,trojan, relay-skyvpn ,skyvpn, SKYVPN,  总模式, 🌐 本机·本地直连]}
 
   - name: 总模式
     icon: "https://cdn.jsdelivr.net/gh/GitMetaio/Surfing@rm/Home/icon/All.svg"
