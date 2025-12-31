@@ -745,10 +745,20 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/GitMetaio/rule@master/rule/Clash/Lan/Lan_OCD_IP.mrs"
     #rule-providers:
   cloudflare_ip:
-    <<: *IPCIDR
+    type: http
+    behavior: ipcidr
+    format: text
     path: ./rules/cloudflare_ip.txt
     url: "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cloudflare/cloudflare_plain.txt"
     interval: 86400
+
+  ads:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/ads.list
+    url: "https://raw.githubusercontent.com/mohicai/File/refs/heads/main/file/ads.list"
+    interval: 8688
 
 rules:
 
@@ -767,8 +777,11 @@ rules:
   - DST-PORT,53,🌐 DNS_Hijack
   - DST-PORT,853,DNS连接
 
-
   - RULE-SET,WebRTC_端/域,WebRTC
+  
+  - RULE-SET,ads,WebRTC  
+  
+  
   - RULE-SET,No-ads-all_域,广告拦截
 
   - PROCESS-NAME,com.ss.android.ugc.aweme,抖音
