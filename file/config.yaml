@@ -761,7 +761,8 @@ rule-providers:
     interval: 8688
 
 rules:
-
+  - RULE-SET,ads,WebRTC  
+  
   - PROCESS-NAME,com.taobao.taobao,淘宝
   - PROCESS-NAME,com.bybit.app,BYBIT
   - PROCESS-NAME,news.bad.app,relay-skyvpn
@@ -778,8 +779,6 @@ rules:
   - DST-PORT,853,DNS连接
 
   - RULE-SET,WebRTC_端/域,WebRTC
-  
-  - RULE-SET,ads,WebRTC  
   
   
   - RULE-SET,No-ads-all_域,广告拦截
