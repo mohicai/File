@@ -761,7 +761,9 @@ rule-providers:
     interval: 8688
 
 rules:
-  - RULE-SET,ads,WebRTC  
+  - RULE-SET,ads,WebRTC 
+  
+  - PROCESS-NAME,com.esuper.file.explorer,WebRTC
   
   - PROCESS-NAME,com.taobao.taobao,淘宝
   - PROCESS-NAME,com.bybit.app,BYBIT
