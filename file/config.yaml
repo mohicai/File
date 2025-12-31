@@ -761,6 +761,10 @@ rule-providers:
     interval: 8688
 
 rules:
+
+  - RULE-SET,Private_域,🌐 本机·本地直连
+  - RULE-SET,Private_IP,🌐 本机·本地直连,no-resolve
+
   - RULE-SET,ads,WebRTC 
   
   - PROCESS-NAME,com.esuper.file.explorer,WebRTC
@@ -838,8 +842,7 @@ rules:
   - RULE-SET,cloudflare_ip,CF类网站,no-resolve
   # 匹配所有属于 Cloudflare 的自主系统编号流量
   #- ASN,13335,CF类网站,no-resolve
-  - RULE-SET,Private_域,🌐 本机·本地直连
-  - RULE-SET,Private_IP,🌐 本机·本地直连,no-resolve
+
 
   - RULE-SET,CN_域,国内连接
   - RULE-SET,CN_IP,国内连接
