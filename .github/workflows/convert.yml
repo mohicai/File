@@ -33,7 +33,7 @@ jobs:
 
       - name: Commit results
         run: |
-          git config --global user.email "bot@example.com"
+          git config --global user.email "2697288516@qq.com"
           git add file/*.mrs
           git commit -m "Auto convert .list to .mrs" || echo "No changes to commit"
           git push
