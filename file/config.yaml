@@ -842,13 +842,13 @@ rules:
   - RULE-SET,Telegram_域,Telegram
   - RULE-SET,Telegram_IP,Telegram,no-resolve
 
-  - RULE-SET,cloudflare_ip,CF类网站,no-resolve
   # 匹配所有属于 Cloudflare 的自主系统编号流量
   #- ASN,13335,CF类网站,no-resolve
 
-
   - RULE-SET,CN_域,国内连接
   - RULE-SET,CN_IP,国内连接
+
+  - RULE-SET,cloudflare_ip,CF类网站,no-resolve
 
   - MATCH,漏网之鱼
 # —————————
