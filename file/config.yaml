@@ -783,7 +783,6 @@ rules:
   - DOMAIN-KEYWORD,cloudflare,Cloudflare
   - DOMAIN-KEYWORD,copilot,Copilot
   - DOMAIN-KEYWORD,temu,Temu
- # - DOMAIN-KEYWORD,mohic,mohic
   
   - DST-PORT,53,🌐 DNS_Hijack
   - DST-PORT,853,DNS连接
@@ -850,6 +849,9 @@ rules:
   - RULE-SET,CN_IP,国内连接
 
   - RULE-SET,cloudflare_ip,CF类网站,no-resolve
-
+  
+  - DOMAIN-KEYWORD,mohic,mohic
+  
+  
   - MATCH,漏网之鱼
 # —————————
