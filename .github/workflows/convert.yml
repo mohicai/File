@@ -3,7 +3,8 @@ name: Convert .list to .mrs
 on:
   push:
     paths:
-      - 'file/**/*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
+      - 'file/**/*.list' # 只在 file/ 目录下的 .list 文件变动时触发
+      - 'file/**/*.domain' 
       - '.github/workflows/convert.yml'
   workflow_dispatch:        # 支持手动触发
 
@@ -34,6 +35,11 @@ jobs:
             base="${f%.list}"
             echo "Converting $f -> ${base}.mrs"
             mihomo convert-ruleset domain text "$f" "${base}.mrs"
+          done
+          for f in $(find file -name "*.domain"); do
+            base="${f%.domain}"
+            echo "Converting $f -> ${base}.mrs"
+            mihomo convert-ruleset ipcidr text "$f" "${base}.mrs"
           done
 
       - name: Commit results
