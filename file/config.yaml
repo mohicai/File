@@ -758,7 +758,7 @@ rule-providers:
     #behavior: domain
     #format: text
     path: ./rules/ads.mrs
-    url: "https://raw.githubusercontent.com/mohicai/File/refs/heads/main/file/ads.mrs"
+    url: "https://github.com/mohicai/File/raw/refs/heads/master/file/ads.mrs"
     interval: 8688
 
 rules:
