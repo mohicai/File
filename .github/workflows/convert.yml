@@ -43,4 +43,4 @@ jobs:
           git add file/*.mrs
           git diff --cached --quiet && echo "No changes to commit" && exit 0
           git commit -m "Auto convert .list to .mrs"
-          git push
+          git push origin HEAD:master
