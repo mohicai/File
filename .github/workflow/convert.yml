@@ -1,0 +1,35 @@
+name: Convert .list to .mrs
+
+on:
+  push:
+    paths:
+      - 'file/**/*.list'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install Mihomo
+        run: |
+          curl -L https://github.com/MetaCubeX/mihomo/releases/latest/download/mihomo-linux-amd64.tar.gz -o mihomo.tar.gz
+          tar -xzf mihomo.tar.gz
+          sudo mv mihomo /usr/local/bin/
+
+      - name: Convert .list files
+        run: |
+          for f in $(find . -name "*.list"); do
+            base="${f%.list}"
+            echo "Converting $f -> ${base}.mrs"
+            mihomo convert ruleset --input "$f" --output "${base}.mrs" --type domain
+          done
+
+      - name: Commit results
+        run: |
+          git config --global user.name "workflow-bot"
+          git config --global user.email "bot@example.com"
+          git add *.mrs
+          git commit -m "Auto convert .list to .mrs"
+          git push
