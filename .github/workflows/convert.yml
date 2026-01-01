@@ -28,7 +28,7 @@ jobs:
           for f in $(find file -name "*.list"); do
             base="${f%.list}"
             echo "Converting $f -> ${base}.mrs"
-            mihomo convert ruleset --input "$f" --output "${base}.mrs" --type domain
+            mihomo convert-ruleset domain text  --input "$f" --output "${base}.mrs"
           done
 
       - name: Commit results
