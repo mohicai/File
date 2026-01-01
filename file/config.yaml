@@ -753,10 +753,11 @@ rule-providers:
     interval: 86400
 
   ads:
-    type: http
-    behavior: domain
-    format: text
-    path: ./rules/ads.list
+    <<: *Domain
+    #type: http
+    #behavior: domain
+    #format: text
+    path: ./rules/ads.mrs
     url: "https://raw.githubusercontent.com/mohicai/File/refs/heads/main/file/ads.mrs"
     interval: 8688
 
