@@ -3,7 +3,7 @@ name: Convert .list to .mrs
 on:
   push:
     paths:
-      - '**/*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
+      - 'file/**/*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
       - '.github/workflows/convert.yml'
   workflow_dispatch:        # 支持手动触发
 
@@ -28,12 +28,11 @@ jobs:
           for f in $(find file -name "*.list"); do
             base="${f%.list}"
             echo "Converting $f -> ${base}.mrs"
-            mihomo convert-ruleset domain text  --input "$f" --output "${base}.mrs"
+            mihomo convert-ruleset domain text  "$f" "${base}.mrs"
           done
 
       - name: Commit results
         run: |
-          git config --global user.name "workflow-bot"
           git config --global user.email "bot@example.com"
           git add file/*.mrs
           git commit -m "Auto convert .list to .mrs" || echo "No changes to commit"
