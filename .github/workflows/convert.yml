@@ -3,7 +3,7 @@ name: Convert .list to .mrs
 on:
   push:
     paths:
-      - 'file/**/*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
+      - 'file//*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
       - '.github/workflows/convert.yml'
   workflow_dispatch:        # 支持手动触发
 
@@ -15,6 +15,8 @@ jobs:
       #  uses: mxschmitt/action-tmate@v3
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true   # 保留 GITHUB_TOKEN，后续能推送
 
       - name: Install Mihomo
         run: |
@@ -33,7 +35,9 @@ jobs:
 
       - name: Commit results
         run: |
-          git config --global user.email "2697288516@qq.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add file/*.mrs
-          git commit -m "Auto convert .list to .mrs" || echo "No changes to commit"
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "Auto convert .list to .mrs"
           git push
