@@ -10,6 +10,9 @@ on:
 jobs:
   convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write       # 允许写入仓库内容
+
     steps:
       #- name: Setup tmate session
       #  uses: mxschmitt/action-tmate@v3
@@ -30,7 +33,7 @@ jobs:
           for f in $(find file -name "*.list"); do
             base="${f%.list}"
             echo "Converting $f -> ${base}.mrs"
-            mihomo convert-ruleset domain text  "$f" "${base}.mrs"
+            mihomo convert-ruleset domain text "$f" "${base}.mrs"
           done
 
       - name: Commit results
