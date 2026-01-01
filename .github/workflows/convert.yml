@@ -3,7 +3,8 @@ name: Convert .list to .mrs
 on:
   push:
     paths:
-      - 'file/**/*.list'
+      - 'file/**/*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
+  workflow_dispatch:        # 支持手动触发
 
 jobs:
   convert:
@@ -17,11 +18,11 @@ jobs:
           curl -L https://github.com/MetaCubeX/mihomo/releases/download/v1.19.18/mihomo-linux-amd64-v3-v1.19.18.gz -o mihomo.gz
           gzip -d mihomo.gz
           chmod +x mihomo
-          sudo mv mihomo /usr/local/bin/
+          sudo mv mihomo /usr/local/bin/mihomo
 
       - name: Convert .list files
         run: |
-          for f in $(find . -name "*.list"); do
+          for f in $(find file -name "*.list"); do
             base="${f%.list}"
             echo "Converting $f -> ${base}.mrs"
             mihomo convert ruleset --input "$f" --output "${base}.mrs" --type domain
@@ -31,6 +32,6 @@ jobs:
         run: |
           git config --global user.name "workflow-bot"
           git config --global user.email "bot@example.com"
-          git add *.mrs
-          git commit -m "Auto convert .list to .mrs"
+          git add file/*.mrs
+          git commit -m "Auto convert .list to .mrs" || echo "No changes to commit"
           git push
