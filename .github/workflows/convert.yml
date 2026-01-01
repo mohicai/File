@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'file/**/*.list'   # 只在 file/ 目录下的 .list 文件变动时触发
+      - '.github/workflows/convert.yml'
   workflow_dispatch:        # 支持手动触发
 
 jobs:
