@@ -745,11 +745,13 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/GitMetaio/rule@master/rule/Clash/Lan/Lan_OCD_IP.mrs"
     #rule-providers:
   cloudflare_ip:
-    type: http
-    behavior: ipcidr
-    format: text
-    path: ./rules/cloudflare_ip.txt
-    url: "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cloudflare/cloudflare_plain.txt"
+    <<: *IPCIDR
+    #type: http
+    #behavior: ipcidr
+    #format: text
+    path: ./rules/cloudflare_ip.mrs
+    #url: "https://raw.githubusercontent.com/123jjck/cdn-ip-ranges/main/cloudflare/cloudflare_plain.txt"
+    url: "https://github.com/mohicai/File/raw/refs/heads/master/file/cloudflare_ip.mrs"
     interval: 86400
 
   ads:
